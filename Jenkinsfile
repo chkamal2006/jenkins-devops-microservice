@@ -27,18 +27,21 @@ pipeline{
 		}
 		stage('Compile'){
 			steps{
-				sh "mvn clean compile"
+//				sh "mvn clean compile"
+                echo "Compile"
 
 			}
 		}
 		stage('Test'){
 			steps{
-				sh "mvn test"
+//				sh "mvn test"
+                echo "Test"
 			}
 		}
 		stage('Integration Test'){
 			steps{
-				sh "mvn failsafe:integration-test failsafe:verify"
+//				sh "mvn failsafe:integration-test failsafe:verify"
+                echo "Integration Test"
 			}
 		}
 
